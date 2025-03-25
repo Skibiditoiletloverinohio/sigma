@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Printing Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            margin: 50px auto;
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .hidden {
+            display: none;
+        }
+        .gallery img {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to 3D Printing Hub</h1>
+        <p>Explore our 3D printing services and materials.</p>
+        <button onclick="showAlert()">Get a Quote</button>
+        <button onclick="toggleInfo()">More Info</button>
+        <button onclick="toggleGallery()">Show Gallery</button>
+        <p id="info" class="hidden">We offer high-quality 3D printing with a variety of materials and colors.</p>
+        
+        <div id="gallery" class="hidden gallery">
+            <img src="https://via.placeholder.com/100" alt="3D Print Sample">
+            <img src="https://via.placeholder.com/100" alt="3D Print Sample">
+            <img src="https://via.placeholder.com/100" alt="3D Print Sample">
+        </div>
+    </div>
+
+    <script>
+        function showAlert() {
+            alert("Get a quote by contacting us at contact@3dprintinghub.com");
+        }
+        function toggleInfo() {
+            var info = document.getElementById("info");
+            info.classList.toggle("hidden");
+        }
+        function toggleGallery() {
+            var gallery = document.getElementById("gallery");
+            gallery.classList.toggle("hidden");
+        }
+    </script>
+</body>
+</html>
